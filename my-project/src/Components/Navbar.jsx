@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
-          href="https://www.linkedin.com/in/rex-umeh-2537202b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          href="https://www.linkedin.com/in/dicksonumeh"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -17,20 +17,12 @@ const Navbar = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/Rexxy0011"
+          href="https://github.com/dicksonumeh"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
           <FaGithub />
-        </a>
-        <a
-          href="https://www.instagram.com/reh_ex?igsh=cW4zZ2xzdGJmYmJo&utm_source=qr"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="instagram"
-        >
-          <FaInstagram />
         </a>
       </div>
     </nav>
