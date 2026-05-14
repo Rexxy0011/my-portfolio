@@ -1,106 +1,56 @@
-import docport from "./docport.jpeg";
-import bloghexa from "./bloghexa.jpeg";
-import molocart from "./molocart.jpeg";
-import asaihomes from "./asaihomes.jpeg";
-
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "January 2026 — Present",
+    role: "Health Data Analyst",
+    company: "Freelance",
+    location: "Sheffield, South Yorkshire",
+    technologies: ["R", "SQL", "Power BI", "Excel"],
+    bullets: [
+      "Analysed large healthcare datasets using R, SQL, Excel, and Power BI to generate actionable insights on service performance, patient flow, and operational efficiency.",
+      "Designed and developed interactive dashboards in Power BI to monitor key healthcare KPIs including waiting times, pathway pressure, long waiters, performance targets, and service utilisation.",
+      "Wrote complex SQL queries to extract, clean, join, and summarise healthcare data from relational databases for reporting and analysis.",
+      "Performed data cleaning, validation, and transformation on raw healthcare datasets to improve data quality and ensure reliable reporting outputs.",
+      "Conducted exploratory data analysis in R to identify patterns, trends, bottlenecks, and variation in clinical and operational datasets.",
+      "Modelled and analysed patient pathway and workflow data, identifying inefficiencies and delays to inform service improvement initiatives.",
+      "Analysed Referral to Treatment (RTT) data to assess provider performance, waiting list size, long-wait patient burden, and specialty-level backlog pressures.",
+      "Developed healthcare performance indicators and comparative metrics that enabled evaluation of service delivery across providers, specialties, and time periods.",
+      "Produced visual reports and performance summaries that facilitated evidence-based decision-making in healthcare settings.",
+      "Used Power BI data modelling and DAX measures to create meaningful performance metrics such as cancellation rates, no-show rates, turnaround times, and utilisation measures.",
+      "Applied statistical and analytical techniques in R to compare trends across patient groups, time periods, and service categories.",
+      "Built end-to-end analytics projects using public healthcare datasets, including waiting list analysis, prescribing analysis, and PET-CT workflow modelling.",
+      "Created and analysed synthetic operational datasets to simulate PET-CT imaging workflows and assess delays, throughput, scanner performance, and reporting turnaround.",
+      "Communicated analytical findings clearly through dashboards, charts, and written summaries tailored to operational and clinical improvement contexts.",
+      "Demonstrated strong understanding of healthcare operations, clinical pathways, and imaging service workflows, allowing technical analysis to be grounded in real clinical practice.",
+      "Supported project documentation and reproducibility by maintaining clear code structure, workflow steps, and GitHub project repositories.",
+    ],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "DocPort",
-    image: docport,
+    title: "PET-CT Ops Dashboard",
     description:
-      "DocPort is an online medical appointment platform that streamlines how patients schedule and manage doctor visits. It offers secure booking, Paystack payments, and dedicated portals for both administrators and doctors.",
-    features: [
-      "Secure online appointment booking",
-      "Paystack payment integration",
-      "Admin dashboard for managing users and appointments",
-      "Doctor portal for schedules and availability",
-      "Real-time updates and notifications",
-    ],
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Paystack "],
-    vercel: "https://docport-eta.vercel.app/", // <--- UPDATE THIS
+      "Developed a healthcare analytics project focused on PET-CT service performance using data analysis and dashboarding techniques. Analysed operational metrics such as scan activity, workflow timings, and service trends to generate insights into utilisation and performance. Built visual outputs to demonstrate how data can support monitoring, planning, and decision-making within an imaging service environment.",
+    technologies: ["Power BI", "R", "Data Analysis"],
+    github: "#", // TODO: replace with real repo URL
   },
-
   {
-    title: "BlogHexa",
-    image: bloghexa,
+    title: "NHS Waiting List / RTT Performance Analysis",
     description:
-      "BlogHexa is a real-time blogging platform built for seamless content creation and reading. It includes instant blog updates, a dedicated admin panel for managing posts and users, and secure authentication.",
-    features: [
-      "Real-time blog publishing",
-      "Admin dashboard for content management",
-      "User and admin authentication",
-      "Responsive and modern UI",
-      "Fast MERN API performance",
-    ],
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    vercel: "https://bloghexa.vercel.app/", // <--- UPDATE THIS
+      "Completed an end-to-end analysis of NHS Referral to Treatment waiting list data to assess provider performance, backlog pressure, and long-wait patient burden. Used SQL, R, Excel, and Power BI to clean, structure, analyse, and visualise healthcare performance data. Produced dashboards and comparative insights showing waiting list size, 18-week performance, specialty backlog, and operational pressure across providers.",
+    technologies: ["SQL", "R", "Excel", "Power BI"],
+    github: "#", // TODO: replace with real repo URL
   },
-
   {
-    title: "Molocart",
-    image: molocart,
+    title: "PET-CT Workflow Efficiency Analysis (Synthetic Data)",
     description:
-      "Molocart is an e-commerce platform for fresh foods and vegetables, offering fast delivery, affordability, and secure payment options including Paystack and Cash on Delivery.",
-    features: [
-      "Fresh food and vegetable marketplace",
-      "Paystack payment integration",
-      "Cash on Delivery (COD) support",
-      "Merchant product and order management",
-      "Responsive and optimized UI",
-    ],
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Paystack"],
-    vercel: "https://molocart.vercel.app", // <--- UPDATE THIS
-  },
-
-  {
-    title: "AsaiHomes",
-    image: asaihomes,
-    description:
-      "AsaiHomes is a modern front-end real estate platform showcasing premium homes across Nigeria. It blends luxury and affordability with smooth navigation and a responsive design.",
-    features: [
-      "Modern real estate showcase",
-      "Responsive front-end design",
-      "Basin form integration for inquiries",
-      "Smooth navigation and clean UI",
-      "High-quality visuals for immersive viewing",
-    ],
-    technologies: ["React", "Vite", "Tailwind CSS", "Basin"],
-    vercel: "https://asaihomes.vercel.app/", // <--- UPDATE THIS
+      "Designed and analysed a synthetic PET-CT workflow dataset to simulate the patient pathway from referral through reporting. Used R to generate, clean, and analyse operational data covering delays, attendance, scanner activity, turnaround times, and reporting performance, then visualised findings in Power BI. The project was developed to identify workflow bottlenecks and demonstrate how analytics can support efficiency improvement in imaging services.",
+    technologies: ["R", "Power BI", "Synthetic Data"],
+    github: "#", // TODO: replace with real repo URL
   },
 ];
 

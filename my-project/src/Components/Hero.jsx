@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../assets/me.jpg";
+import ProfilePic from "../assets/Generated Image May 14, 2026 - 1_00PM (1).jpg";
 import { motion } from "framer-motion";
 
 // Motion variants
@@ -63,27 +63,27 @@ const Hero = () => {
           >
             <motion.h2
               variants={fadeUp}
-              className="pb-2 text-4xl tracking-tighter lg:text-8xl"
+              className="pb-2 text-4xl tracking-tighter lg:text-8xl font-['Geist_Mono',monospace]"
             >
-              Rex Umeh
+              Dickson Umeh
             </motion.h2>
 
             <motion.span
               variants={fadeUp}
-              className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
+              className="bg-gradient-to-r from-stone-200 to-teal-200 bg-clip-text text-3xl tracking-tight text-transparent"
             >
-              Software Engineer
+              Healthcare Data Analyst
             </motion.span>
 
             <motion.p
               variants={fadeUp}
               className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter"
             >
-              My curiosity for Cloud Security sparked my journey into tech. What
-              began as an interest in how systems stay protected soon grew into
-              a passion for building them. Today, I develop scalable MERN and AI
-              applications that combine performance, security, and great user
-              experience.
+              Healthcare Data Analyst (MSc Data Science) and PET-CT
+              Radiographer with a clinical radiography background. Skilled in
+              R, SQL, Excel, and Power BI for analyzing healthcare data,
+              improving patient flow, and delivering KPI-driven insights for
+              operational efficiency and service performance.
             </motion.p>
 
             <motion.a

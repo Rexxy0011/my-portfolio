@@ -1,26 +1,10 @@
 import React from "react";
-import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import { Github } from "lucide-react";
+import { PROJECTS } from "../constants";
 
-// Animation variants
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const staggerParent = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
-const fadeItem = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
@@ -28,110 +12,90 @@ const fadeItem = {
   },
 };
 
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
 const Projects = () => {
   return (
-    <section className="py-24 px-6 lg:px-12">
-      {/* HEADER */}
-      <motion.h2
+    <section className="relative bg-white py-24 px-6 sm:px-12 lg:px-24">
+      <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-stone-300 to-gray-500 bg-clip-text text-transparent text-4xl text-center mb-16 tracking-tight"
+        className="bg-gradient-to-r from-stone-900 to-stone-500 bg-clip-text text-transparent text-3xl sm:text-4xl mb-16 tracking-tight text-center font-['Geist_Mono',monospace]"
       >
-        Projects
-      </motion.h2>
+        + Projects
+      </motion.h1>
 
-      {/* REDUCED SPACING ON SMALL SCREENS */}
-      <div className="space-y-16 sm:space-y-24 lg:space-y-28">
-        {PROJECTS.map((project, index) => (
-          <motion.div
-            key={index}
-            variants={fadeUp}
+      <div className="mx-auto max-w-4xl space-y-16">
+        {PROJECTS.map((project, idx) => (
+          <motion.article
+            key={project.title}
+            variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className={`flex flex-col lg:flex-row items-start gap-10 sm:gap-16 ${
-              index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-            }`}
+            viewport={{ once: true, margin: "-80px" }}
           >
-            {/* IMAGE + VIEW BUTTON BLOCK */}
-            <div className="w-full lg:w-1/2">
-              <motion.div
-                variants={fadeItem}
-                className="rounded-2xl overflow-hidden shadow-xl bg-black/10"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-80 object-cover"
-                />
-              </motion.div>
+            {/* Number + rule */}
+            <motion.div
+              variants={fadeUp}
+              className="mb-6 flex items-center gap-4"
+            >
+              <span className="text-sm text-[#0E5A6B] font-['Geist_Mono',monospace]">
+                {String(idx + 1).padStart(2, "0")}
+              </span>
+              <span aria-hidden="true" className="h-px flex-1 bg-stone-200" />
+            </motion.div>
 
-              {/* TINY VIEW BUTTON UNDER IMAGE (RESPONSIVE SPACING) */}
-              {project.vercel && (
+            {/* Title + GitHub link */}
+            <motion.div
+              variants={fadeUp}
+              className="mb-5 flex items-start justify-between gap-4"
+            >
+              <h2 className="text-2xl tracking-tight text-stone-900 sm:text-3xl">
+                {project.title}
+              </h2>
+              {project.github && (
                 <a
-                  href={project.vercel}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 sm:mt-3 inline-block border border-white/40 text-white text-xs px-4 py-1 rounded-full"
+                  aria-label={`${project.title} GitHub repository`}
+                  className="mt-2 flex-shrink-0 text-stone-500 transition-colors hover:text-[#0E5A6B]"
                 >
-                  View Project
+                  <Github className="h-5 w-5 sm:h-6 sm:w-6" />
                 </a>
               )}
-            </div>
+            </motion.div>
 
-            {/* DETAILS */}
-            <motion.div
-              variants={staggerParent}
-              className="flex-1 max-w-xl space-y-5"
+            {/* Description */}
+            <motion.p
+              variants={fadeUp}
+              className="text-base leading-relaxed text-stone-600 sm:text-lg"
             >
-              <motion.h3
-                variants={fadeItem}
-                className="text-3xl font-semibold text-accent"
+              {project.description}
+            </motion.p>
+
+            {/* Tech tags */}
+            {project.technologies && (
+              <motion.div
+                variants={fadeUp}
+                className="mt-6 flex flex-wrap gap-2"
               >
-                {project.title}
-              </motion.h3>
-
-              <motion.p
-                variants={fadeItem}
-                className="text-gray-300 leading-relaxed"
-              >
-                {project.description}
-              </motion.p>
-
-              {/* FEATURES */}
-              {project.features && (
-                <motion.ul
-                  variants={staggerParent}
-                  className="space-y-2 text-gray-400 text-sm"
-                >
-                  {project.features.map((feat, idx) => (
-                    <motion.li
-                      key={idx}
-                      variants={fadeItem}
-                      className="flex items-start gap-2"
-                    >
-                      <span className="text-accent text-lg mt-[-4px]">•</span>
-                      <span>{feat}</span>
-                    </motion.li>
-                  ))}
-                </motion.ul>
-              )}
-
-              {/* TECH STACK */}
-              <motion.div variants={fadeItem} className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, idx) => (
+                {project.technologies.map((tech) => (
                   <span
-                    key={idx}
-                    className="bg-stone-900 border border-gray-700 text-xs text-gray-300 px-3 py-1 rounded-full"
+                    key={tech}
+                    className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs text-stone-700"
                   >
                     {tech}
                   </span>
                 ))}
               </motion.div>
-            </motion.div>
-          </motion.div>
+            )}
+          </motion.article>
         ))}
       </div>
     </section>

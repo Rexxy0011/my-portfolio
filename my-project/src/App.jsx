@@ -1,9 +1,9 @@
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Technologies from "./Components/Technologies";
-import Projects from "./Components/Projects";
+import Experience from "./Components/Experience";
 import { Toaster } from "react-hot-toast";
-import Contact from "./Components/Contact";
+import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 
 const App = () => {
@@ -18,12 +18,24 @@ const App = () => {
           </div>
         </div>
 
+        {/* Teal hero band — full bleed, wraps Navbar + Hero */}
+        <div className="relative overflow-hidden bg-[#0E5A6B]">
+          {/* Grid overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:14px_24px]" />
+          {/* Radial glow */}
+          <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#ffffff10,transparent)]" />
+
+          <div className="container relative mx-auto px-8">
+            <Navbar />
+            <Hero />
+          </div>
+        </div>
+
+        {/* Remaining sections — page-wide dark background shows through */}
         <div className="container mx-auto px-8">
-          <Navbar />
-          <Hero />
           <Technologies />
+          <Experience />
           <Projects />
-          <Contact />
           <Footer />
         </div>
       </div>
