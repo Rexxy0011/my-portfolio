@@ -36,14 +36,14 @@ export const PROJECTS = [
     description:
       "Developed a healthcare analytics project focused on PET-CT service performance using data analysis and dashboarding techniques. Analysed operational metrics such as scan activity, workflow timings, and service trends to generate insights into utilisation and performance. Built visual outputs to demonstrate how data can support monitoring, planning, and decision-making within an imaging service environment.",
     technologies: ["Power BI", "R", "Data Analysis"],
-    github: "https://github.com/dicksonumeh/referral-to-treatment-workflow-",
+    github: "https://github.com/dicksonumeh/imaging-operations-dashboard",
   },
   {
     title: "NHS Waiting List / RTT Performance Analysis",
     description:
       "Completed an end-to-end analysis of NHS Referral to Treatment waiting list data to assess provider performance, backlog pressure, and long-wait patient burden. Used SQL, R, Excel, and Power BI to clean, structure, analyse, and visualise healthcare performance data. Produced dashboards and comparative insights showing waiting list size, 18-week performance, specialty backlog, and operational pressure across providers.",
     technologies: ["SQL", "R", "Excel", "Power BI"],
-    github: "https://github.com/dicksonumeh/imaging-operations-dashboard",
+    github: "https://github.com/dicksonumeh/referral-to-treatment-workflow-",
   },
   {
     title: "PET-CT Workflow Efficiency Analysis (Synthetic Data)",

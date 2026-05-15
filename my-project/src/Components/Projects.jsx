@@ -64,9 +64,10 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.title} GitHub repository`}
-                  className="mt-2 flex-shrink-0 text-stone-500 transition-colors hover:text-[#0E5A6B]"
+                  className="mt-2 inline-flex flex-shrink-0 items-center gap-2 rounded-full border border-[#0E5A6B] bg-white px-4 py-2 text-sm font-medium text-[#0E5A6B] transition-all hover:bg-[#0E5A6B] hover:text-white hover:shadow-md"
                 >
-                  <Github className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <Github className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span>View code</span>
                 </a>
               )}
             </motion.div>
