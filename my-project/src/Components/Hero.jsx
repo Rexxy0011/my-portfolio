@@ -80,10 +80,10 @@ const Hero = () => {
               className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter"
             >
               Healthcare Data Analyst (MSc health Data Science) with a clinical
-              background in medical radiography with a clinical radiography
-              background. Skilled in R, SQL, Excel, and Power BI for analyzing
-              healthcare data, improving patient flow, and delivering KPI-driven
-              insights for operational efficiency and service performance.
+              background in medical radiography . Skilled in R, SQL, Excel, and
+              Power BI for analyzing healthcare data, improving patient flow,
+              and delivering KPI-driven insights for operational efficiency and
+              service performance.
             </motion.p>
 
             <motion.a
