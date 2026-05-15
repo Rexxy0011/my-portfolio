@@ -36,21 +36,21 @@ export const PROJECTS = [
     description:
       "Developed a healthcare analytics project focused on PET-CT service performance using data analysis and dashboarding techniques. Analysed operational metrics such as scan activity, workflow timings, and service trends to generate insights into utilisation and performance. Built visual outputs to demonstrate how data can support monitoring, planning, and decision-making within an imaging service environment.",
     technologies: ["Power BI", "R", "Data Analysis"],
-    github: "https://github.com/dicksonumeh",
+    github: "https://github.com/dicksonumeh/referral-to-treatment-workflow-",
   },
   {
     title: "NHS Waiting List / RTT Performance Analysis",
     description:
       "Completed an end-to-end analysis of NHS Referral to Treatment waiting list data to assess provider performance, backlog pressure, and long-wait patient burden. Used SQL, R, Excel, and Power BI to clean, structure, analyse, and visualise healthcare performance data. Produced dashboards and comparative insights showing waiting list size, 18-week performance, specialty backlog, and operational pressure across providers.",
     technologies: ["SQL", "R", "Excel", "Power BI"],
-    github: "https://github.com/dicksonumeh",
+    github: "https://github.com/dicksonumeh/imaging-operations-dashboard",
   },
   {
     title: "PET-CT Workflow Efficiency Analysis (Synthetic Data)",
     description:
       "Designed and analysed a synthetic PET-CT workflow dataset to simulate the patient pathway from referral through reporting. Used R to generate, clean, and analyse operational data covering delays, attendance, scanner activity, turnaround times, and reporting performance, then visualised findings in Power BI. The project was developed to identify workflow bottlenecks and demonstrate how analytics can support efficiency improvement in imaging services.",
     technologies: ["R", "Power BI", "Synthetic Data"],
-    github: "https://github.com/dicksonumeh",
+    github: "https://github.com/dicksonumeh/PET-CT-Workflow-Efficiency-Analysis",
   },
 ];
 

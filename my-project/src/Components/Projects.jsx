@@ -19,7 +19,7 @@ const staggerContainer = {
 
 const Projects = () => {
   return (
-    <section className="relative bg-white py-24 px-6 sm:px-12 lg:px-24">
+    <section className="relative bg-white border border-stone-200 py-24 px-6 sm:px-12 lg:px-24">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
